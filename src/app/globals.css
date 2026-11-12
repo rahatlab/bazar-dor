@@ -49,3 +49,18 @@ body {
   color: var(--color-base-content);
   font-family: var(--font-sans);
 }
+
+/* Price ticker marquee */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 60s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
