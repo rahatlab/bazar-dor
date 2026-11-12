@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { authClient } from "@/lib/auth-client";
+import PasswordInput from "@/components/PasswordInput";
 
 function SignUpForm() {
   const router = useRouter();
@@ -45,7 +46,9 @@ function SignUpForm() {
   };
 
   const onSocial = async (provider) => {
-    const { error } = await authClient.signUp.social({
+    // BetterAuth-e sign-up/social endpoint nei — signIn.social-i notun
+    // account auto-create kore (first login)
+    const { error } = await authClient.signIn.social({
       provider,
       callbackURL: "/",
     });
@@ -92,22 +95,18 @@ function SignUpForm() {
 
         <label className="form-control block space-y-1.5">
           <span className="text-sm font-medium">পাসওয়ার্ড</span>
-          <input
-            type="password"
+          <PasswordInput
             name="password"
             placeholder="কমপক্ষে ৬ অক্ষর"
-            className="input w-full"
             autoComplete="new-password"
           />
         </label>
 
         <label className="form-control block space-y-1.5">
           <span className="text-sm font-medium">পাসওয়ার্ড আবার লিখুন</span>
-          <input
-            type="password"
+          <PasswordInput
             name="confirm"
             placeholder="আবার লিখুন"
-            className="input w-full"
             autoComplete="new-password"
           />
         </label>

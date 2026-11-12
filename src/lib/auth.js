@@ -24,6 +24,13 @@ if (process.env.GITHUB_CLIENT_ID) {
 }
 
 export const auth = betterAuth({
+  baseURL: process.env.BETTER_AUTH_URL,
+  // Local host-variant gulo (localhost/127.0.0.1/LAN IP) jate reject na hoy
+  trustedOrigins: [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://192.168.1.100:3000",
+  ],
   // Atlas = replica set → client dile transactions on (official doc)
   database: mongodbAdapter(db, { client }),
   emailAndPassword: {

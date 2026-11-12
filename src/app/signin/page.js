@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import toast from "react-hot-toast";
 import { authClient } from "@/lib/auth-client";
+import PasswordInput from "@/components/PasswordInput";
 
 function SignInForm() {
   const router = useRouter();
@@ -79,11 +80,9 @@ function SignInForm() {
 
         <label className="form-control block space-y-1.5">
           <span className="text-sm font-medium">পাসওয়ার্ড</span>
-          <input
-            type="password"
+          <PasswordInput
             name="password"
             placeholder="আপনার পাসওয়ার্ড"
-            className="input w-full"
             autoComplete="current-password"
           />
         </label>

@@ -2,6 +2,12 @@
 const nextConfig = {
   /* config options here */
   reactCompiler: true,
+  // Google avatar directly browser theke load hoy na — optimizer diye proxy
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "lh3.googleusercontent.com" },
+    ],
+  },
   turbopack: {
     rules: {
       "*.css": {

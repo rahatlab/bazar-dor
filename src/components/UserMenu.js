@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import LogoutButton from "./LogoutButton";
 
@@ -10,9 +11,11 @@ export default function UserMenu({ user }) {
     <details className="dropdown dropdown-end">
       <summary className="btn btn-ghost btn-sm cursor-pointer gap-2 px-2">
         {user.image ? (
-          <img
+          <Image
             src={user.image}
             alt=""
+            width={32}
+            height={32}
             className="size-8 rounded-full object-cover"
           />
         ) : (

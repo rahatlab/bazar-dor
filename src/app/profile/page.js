@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { headers } from "next/headers";
@@ -25,9 +26,11 @@ export default async function ProfilePage() {
       <div className="flex flex-col gap-4 rounded-2xl border border-base-300 bg-base-100 p-6 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-4">
           {user.image ? (
-            <img
+            <Image
               src={user.image}
               alt=""
+              width={56}
+              height={56}
               className="size-14 rounded-full object-cover"
             />
           ) : (
