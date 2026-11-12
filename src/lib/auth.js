@@ -1,5 +1,5 @@
 import { betterAuth } from "better-auth";
-import { mongodbAdapter } from "better-auth/adapters/mongodb";
+import { mongodbAdapter } from "@better-auth/mongo-adapter";
 import { MongoClient } from "mongodb";
 
 // MongoClient connect kore na construction-e — first request-e connect hobe
@@ -24,10 +24,17 @@ if (process.env.GITHUB_CLIENT_ID) {
 }
 
 export const auth = betterAuth({
-  database: mongodbAdapter(db),
+  // Atlas = replica set → client dile transactions on (official doc)
+  database: mongodbAdapter(db, { client }),
   emailAndPassword: {
     enabled: true,
     minPasswordLength: 6,
   },
   socialProviders,
+  // /get-session etc. 2-3x fast (adapter ≥1.4.0)
+  advanced: {
+    database: {
+      joins: true,
+    },
+  },
 });

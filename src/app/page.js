@@ -4,9 +4,10 @@ import ProductCard from "@/components/ProductCard";
 
 function Hero() {
   return (
-    <section className="rounded-2xl border border-base-300 bg-base-100 p-6 sm:p-8">
+    <section className="rounded-2xl border border-base-300 bg-base-200 p-6 sm:p-10">
       <div className="flex flex-col items-center gap-8 md:flex-row">
-        <div className="flex-1 space-y-4">
+        {/* Figma onujayi narrow text column, boro image */}
+        <div className="w-full space-y-4 md:w-[34%] md:shrink-0">
           <span className="badge badge-outline badge-success">
             প্রতিদিন, ৮টি বাজার হয়ে আপডেট
           </span>
@@ -26,7 +27,7 @@ function Hero() {
           alt="তাজা পণ্যের ঝুড়ি"
           width={360}
           height={270}
-          className="w-full max-w-56 sm:max-w-72 md:max-w-none"
+          className="w-full max-w-56 sm:max-w-72 md:max-w-none md:flex-1"
           priority
         />
       </div>

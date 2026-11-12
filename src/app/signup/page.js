@@ -146,8 +146,10 @@ function SignUpForm() {
         </p>
       </form>
 
-      <p className="text-center text-xs text-base-content/50">
-        — এটি একটি ডেমো অ্যাপ
+      <p className="text-center text-sm">
+        <Link href="/" className="text-base-content/60 hover:text-primary">
+          ← হোমে ফিরে যান
+        </Link>
       </p>
     </div>
   );
