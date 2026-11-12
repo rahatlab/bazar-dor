@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
-@plugin "daisyui";
+@plugin "daisyui" {
+  /* Light-only — ekta i theme (bazar), kono dark/auto theme load hobe na */
+  themes: bazar --default;
+}
 
 /* Light-only theme — green primary, Figma design onujayi */
 @plugin "daisyui/theme" {

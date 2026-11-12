@@ -19,7 +19,10 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
-  const products = await getProducts().catch(() => []);
+  // Ticker-needer field-i pass — full object (markets) flight payload-e jay na
+  const products = (await getProducts().catch(() => [])).map(
+    ({ image, nameBn, today, change }) => ({ image, nameBn, today, change })
+  );
 
   return (
     <html lang="bn" className={`${bengali.variable} h-full antialiased`}>
