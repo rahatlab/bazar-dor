@@ -41,8 +41,10 @@ function SignUpForm() {
       return;
     }
 
-    toast.success("অ্যাকাউন্ট তৈরি হয়েছে! এখন সাইন ইন করুন");
-    router.push("/signin");
+    // signUp.email-e session auto-create hoy (BetterAuth default) — home-ei jay
+    toast.success("অ্যাকাউন্ট তৈরি হয়েছে!");
+    router.push("/");
+    router.refresh();
   };
 
   const onSocial = async (provider) => {
