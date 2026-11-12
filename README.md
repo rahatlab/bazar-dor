@@ -1,15 +1,15 @@
-# 🛒 বাজার দর (BazarDor)
+# 🛒 BazarDor
 
-**প্রয়োজনীয় পণ্যের দাম এক নজরে** — বাংলাদেশের বিভিন্ন বাজারের চাল, ডাল, তেল, সবজি, মাছ, মাংসসহ প্রয়োজনীয় পণ্যের আজকের দাম, গতকালের তুলনা ও বাজারভিত্তিক বিস্তারিত দেখানে একটি আধুনিক ওয়েব অ্যাপ।
+**Essential Commodity Prices at a Glance** — A modern web application displaying today's prices, yesterday's comparisons, and market-specific details for essential goods—including rice, lentils, oil, vegetables, fish, and meat—across various markets in Bangladesh.
 
 ## 🚀 Features
 
-1. **লাইভ প্রাইস টিকার** — নেভিগেশনের নিচে অসীম স্ক্রল মার্কিতে সব পণ্যের দাম ও ▲▼ পরিবর্তন।
-2. **হোম পেজ বিশ্লেষণ** — আজ দাম বেড়েছে (top 6) ও কমেছে (top 6) সেকশন + সব পণ্যের রেসপন্সিভ গ্রিড।
-3. **ক্যাটাগরি পেজ + সর্ট** — ডিফল্ট / দাম কম থেকে বেশি / বেশি থেকে কম (সংখ্যাভিত্তিক সর্ট), স্কেলেটন ও খালি অবস্থা।
-4. **প্রোডাক্ট ডিটেইল (প্রোটেক্টেড)** — লগইন ছাড়া যায় না; সর্বনিম্ন/সর্বোচ্চ/গড় দাম ও ১২টি বাজারভিত্তিক টেবিল।
-5. **অথেনটিকেশন** — BetterAuth দিয়ে ইমেইল/পাসওয়ার্ড + Google + GitHub সাইন ইন/আপ, টোস্ট নোটিফিকেশনসহ।
-6. **প্রোফাইল ও আপডেট** — প্রোফাইল পেজ, নাম আপডেট রুট ও সাইন আউট; বাংলা সংখ্যা (১৪৮) ও পুরো সাইট রেসপন্সিভ।
+1. **Live Price Ticker** — An infinite scroll marquee right below the navigation displaying all product prices and their ▲▼ change indicators.
+2. **Home Page Analytics** — "Prices Increased Today" (top 6) and "Prices Decreased Today" (top 6) sections + a responsive grid of all products."Prices Increased Today" (top 6) and "Prices Decreased Today" (top 6) sections + a responsive grid of all products.
+3. **Category Page + Sorting** — Default / Low to High / High to Low sorting (numeric-based), along with skeleton loaders and empty states.
+4. **Product Detail (Protected)** — Restricted access requiring login; displays minimum/maximum/average prices alongside a 12-market price comparison table.
+5. **Authentication** — Email/Password + Google + GitHub sign-in/up using BetterAuth, complete with toast notifications.
+6. **Profile & Updates** — Profile page, name update route, and sign out; supports Bengali numerals (e.g., ১৪৮) and is fully responsive across the entire site.
 
 ## 🛠️ Technologies
 
