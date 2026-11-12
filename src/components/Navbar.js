@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getCategories } from "@/lib/api";
+import AuthSection from "./AuthSection";
 import BanglaDate from "./BanglaDate";
 import CategoryNav from "./CategoryNav";
 
@@ -33,14 +34,7 @@ export default async function Navbar() {
           </span>
         </Link>
 
-        <div className="flex items-center gap-2">
-          <Link href="/signin" className="btn btn-ghost btn-sm">
-            সাইন ইন
-          </Link>
-          <Link href="/signup" className="btn btn-primary btn-sm">
-            সাইন আপ
-          </Link>
-        </div>
+        <AuthSection />
       </div>
 
       <CategoryNav categories={categories} />

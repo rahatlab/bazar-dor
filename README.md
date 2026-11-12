@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛒 বাজার দর (BazarDor)
 
-## Getting Started
+**প্রয়োজনীয় পণ্যের দাম এক নজরে** — বাংলাদেশের বিভিন্ন বাজারের চাল, ডাল, তেল, সবজি, মাছ, মাংসসহ প্রয়োজনীয় পণ্যের আজকের দাম, গতকালের তুলনা ও বাজারভিত্তিক বিস্তারিত দেখানে একটি আধুনিক ওয়েব অ্যাপ।
 
-First, run the development server:
+## 🚀 Features
+
+1. **লাইভ প্রাইস টিকার** — নেভিগেশনের নিচে অসীম স্ক্রল মার্কিতে সব পণ্যের দাম ও ▲▼ পরিবর্তন।
+2. **হোম পেজ বিশ্লেষণ** — আজ দাম বেড়েছে (top 6) ও কমেছে (top 6) সেকশন + সব পণ্যের রেসপন্সিভ গ্রিড।
+3. **ক্যাটাগরি পেজ + সর্ট** — ডিফল্ট / দাম কম থেকে বেশি / বেশি থেকে কম (সংখ্যাভিত্তিক সর্ট), স্কেলেটন ও খালি অবস্থা।
+4. **প্রোডাক্ট ডিটেইল (প্রোটেক্টেড)** — লগইন ছাড়া যায় না; সর্বনিম্ন/সর্বোচ্চ/গড় দাম ও ১২টি বাজারভিত্তিক টেবিল।
+5. **অথেনটিকেশন** — BetterAuth দিয়ে ইমেইল/পাসওয়ার্ড + Google + GitHub সাইন ইন/আপ, টোস্ট নোটিফিকেশনসহ।
+6. **প্রোফাইল ও আপডেট** — প্রোফাইল পেজ, নাম আপডেট রুট ও সাইন আউট; বাংলা সংখ্যা (১৪৮) ও পুরো সাইট রেসপন্সিভ।
+
+## 🛠️ Technologies
+
+- **Next.js 16** (App Router, JavaScript)
+- **Tailwind CSS 4 + daisyUI 5** — styling & responsiveness
+- **BetterAuth** — email/password + Google + GitHub auth
+- **MongoDB** — BetterAuth-er jonno users & sessions store
+- **react-hot-toast** — notification
+- **Noto Serif Bengali** — Bengali typography
+- ডেটা: Programming Hero BazarDor API
+
+## ⚙️ Setup
 
 ```bash
+git clone <your-repo-url>
+cd bazar-dor
+npm install
+cp .env.example .env
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`.env`-e অবশ্যই পূরণ করুন:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- `MONGODB_URI` — MongoDB Atlas connection string (BetterAuth-er jonno)
+- `BETTER_AUTH_SECRET`, `BETTER_AUTH_URL`
+- `GOOGLE_CLIENT_ID/SECRET`, `GITHUB_CLIENT_ID/SECRET` (ঐচ্ছিক — social login-er jonno)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Build & Deploy
 
-## Learn More
+```bash
+npm run build
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+Vercel-এ deploy করতে সব env variable সেটিংসে যোগ করুন।
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📬 Submission
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Live Link:** _\[add after deploy\]_
+- **GitHub Repository Link:** _\[add\]_
